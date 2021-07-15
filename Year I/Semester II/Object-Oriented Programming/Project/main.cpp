@@ -2654,7 +2654,7 @@ void menu::start_menu()
         cout<<"Add new entry - 3\n";
         cout<<"Remove entry - 4\n";
         cout<<"Print entry on screen - 5\n";
-        cout<<"Print entry in file - 6\n";
+        cout<<"Print entry to file - 6\n";
         cout<<"Exit menu - 7\n\n";
         cout<<"Select option: ";
         cin>>option;
@@ -3673,11 +3673,11 @@ void menu::start_menu()
                 while (true)
                 {
                     cout<<"Go back - 0\n\n";
-                    cout<<"Print product in file - 1\n";
-                    cout<<"Print client info in file - 2\n";
-                    cout<<"Print service in file - 3\n";
-                    cout<<"Print promotion in file - 4\n";
-                    cout<<"Print account in file - 5\n\n";
+                    cout<<"Print product to file - 1\n";
+                    cout<<"Print client info to file - 2\n";
+                    cout<<"Print service to file - 3\n";
+                    cout<<"Print promotion to file - 4\n";
+                    cout<<"Print account to file - 5\n\n";
                     cout<<"Select option: ";
                     cin>>option;
                     system("cls");
@@ -3722,7 +3722,7 @@ void menu::start_menu()
                                             app<<"PREBUILT SYSTEM\n";
                                         app<<*products[option-1]<<'\n';
 
-                                        cout<<"Product successfully printed in file!";
+                                        cout<<"Product successfully printed to file!";
                                         Sleep(2000);
                                         system("cls");
 
@@ -3766,7 +3766,7 @@ void menu::start_menu()
                                         advance(it, option-1);
                                         app<<(*it)<<'\n';
 
-                                        cout<<"Client info successfully printed in file!";
+                                        cout<<"Client info successfully printed to file!";
                                         Sleep(2000);
                                         system("cls");
 
@@ -3814,7 +3814,7 @@ void menu::start_menu()
                                             app<<"DIAGNOSTIC SERVICE\n";
                                         app<<(**it)<<'\n';
 
-                                        cout<<"Service successfully printed in file!";
+                                        cout<<"Service successfully printed to file!";
                                         Sleep(2000);
                                         system("cls");
 
@@ -3858,7 +3858,7 @@ void menu::start_menu()
                                         advance(it, option-1);
                                         app<<(**it)<<'\n';
 
-                                        cout<<"Promotion successfully printed in file!";
+                                        cout<<"Promotion successfully printed to file!";
                                         Sleep(2000);
                                         system("cls");
 
@@ -3949,14 +3949,14 @@ void menu::start_menu()
 int main()
 {
 
-/// Porneste meniul:
+/// Start the menu:
 menu* Menu = Menu->create_instance();
 Menu->start_menu();
 
 
-/// Teste pentru clasa "product":
+/// Tests for the class "product":
 ///========================================
-cout<<"Teste pentru clasa \"product\":\n";
+cout<<"Tests for the class \"product\":\n";
 cout<<"========================================\n";
 cout<<"========================================\n\n";
 
@@ -4061,9 +4061,9 @@ cout<<"========================================\n\n\n";
 ///========================================
 
 
-/// Teste pentru clasa "prebuilt_system":
+/// Tests for the class "prebuilt_system":
 ///========================================
-cout<<"Teste pentru clasa \"prebuilt_system\":\n";
+cout<<"Tests for the class \"prebuilt_system\":\n";
 cout<<"========================================\n";
 cout<<"========================================\n\n";
 
@@ -4180,9 +4180,9 @@ cout<<"========================================\n\n\n";
 ///========================================
 
 
-/// Teste pentru clasa "client":
+/// Tests for the class "client":
 ///========================================
-cout<<"Teste pentru clasa \"client\":\n";
+cout<<"Tests for the class \"client\":\n";
 cout<<"========================================\n";
 cout<<"========================================\n\n";
 
@@ -4247,9 +4247,9 @@ cout<<"========================================\n\n\n";
 ///========================================
 
 
-/// Teste pentru clasa "service":
+/// Tests for the class "service":
 ///========================================
-cout<<"Teste pentru clasa \"service\":\n";
+cout<<"Tests for the class \"service\":\n";
 cout<<"========================================\n";
 cout<<"========================================\n\n";
 
@@ -4302,9 +4302,9 @@ cout<<"========================================\n\n\n";
 ///========================================
 
 
-/// Teste pentru clasa "diagnostic_service":
+/// Tests for the class "diagnostic_service":
 ///========================================
-cout<<"Teste pentru clasa \"diagnostic_service\":\n";
+cout<<"Tests for the class \"diagnostic_service\":\n";
 cout<<"========================================\n";
 cout<<"========================================\n\n";
 
@@ -4361,9 +4361,9 @@ cout<<"========================================\n\n\n";
 ///========================================
 
 
-/// Teste pentru clasa "promotion":
+/// Tests for the class "promotion":
 ///========================================
-cout<<"Teste pentru clasa \"promotion\":\n";
+cout<<"Tests for the class \"promotion\":\n";
 cout<<"========================================\n";
 cout<<"========================================\n\n";
 
@@ -4435,9 +4435,9 @@ cout<<"========================================\n\n\n";
 ///========================================
 
 
-/// Teste pentru clasa "promotion":
+/// Tests for the class "promotion":
 ///========================================
-cout<<"Teste pentru clasa \"account\":\n";
+cout<<"Tests for the class \"account\":\n";
 cout<<"========================================\n";
 cout<<"========================================\n\n";
 
@@ -4455,9 +4455,9 @@ cout<<"========================================\n\n\n";
 ///========================================
 
 
-/// Teste pentru clasa "customer":
+/// Tests for the class "customer":
 ///========================================
-cout<<"Teste pentru clasa \"customer\":\n";
+cout<<"Tests for the class \"customer\":\n";
 cout<<"========================================\n";
 cout<<"========================================\n\n";
 
@@ -4540,9 +4540,9 @@ cout<<"========================================\n\n\n";
 ///========================================
 
 
-/// Teste pentru clasa "staff":
+/// Tests for the class "staff":
 ///========================================
-cout<<"Teste pentru clasa \"staff\":\n";
+cout<<"Tests for the class \"staff\":\n";
 cout<<"========================================\n";
 cout<<"========================================\n\n";
 

@@ -1,0 +1,30 @@
+Staff
+George Andrei
+georgpas
+geore@gmail.com
+Site administrator
+
+Customer
+Sasu Alexandru-Cristian
+alexpass
+sasualex@gmail.com
+3
+CPUs a
+GPUs
+RAM Memory
+
+Customer
+Andrei Popa
+byu34
+popa@gmail.com
+2
+GPUs
+CPUs
+
+Staff
+Marian Georgescu
+eugbb478
+Geo@gmail.com
+Site security
+
+END_OF_FILE

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" type="text/css" />
+    <script src="login.js"></script>
+    <title>Hardware Haven - Account Login</title>
+  </head>
+
+  <body>
+    <header>
+      <p id="title">Hardware Haven</p>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="/Home/home.html">Home</a></li>
+          <li><a href="/Articles/articles.html">Articles</a></li>
+          <li>
+            <a href="">Components</a>
+            <ul class="submenu1">
+              <li><a href="/Video cards/video_cards.html">Video cards</a></li>
+              <li><a href="/Processors/processors.html">Processors</a></li>
+              <li>
+                <a href="/Motherboards/motherboards.html">Motherboards</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/Terminology/terminology.html">Terminology</a></li>
+          <li><a href="login.html">Account</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="content">
+      <div class="login-form">
+        <form method="POST" action="/login" name="myLoginForm">
+          <p id="login">Login</p>
+          <p class="imp">
+            E-mail:*
+            <input
+              class="login-input"
+              type="email"
+              name="login_email"
+              placeholder="Enter E-mail"
+              required
+            /><br />
+          </p>
+          <p class="invalid-login-input">"E-mail" field is not filled in.</p>
+          <p class="imp">
+            Password:*
+            <input
+              class="login-input"
+              type="password"
+              name="login_password"
+              placeholder="Enter Password"
+              pattern=".{8,}"
+              title="Minimum length of 8 characters."
+              required
+            /><br />
+          </p>
+          <p class="invalid-login-input">"Password" field is not filled in.</p>
+          <p id="butt">
+            <input type="submit" />
+          </p>
+        </form>
+        <p id="no-account">
+          <a href="/Register/register.html"
+            >Don't have an account? Register here.</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <footer>© 2021 Hardware Haven, Inc. All rights reserved.</footer>
+  </body>
+</html>

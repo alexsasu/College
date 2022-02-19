@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="form-section">
+    <h1 class="title">
+      Register User
+    </h1>
+
+    <form [formGroup]="registerForm" class="form">
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First Name" formControlName="firstName" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Last Name" formControlName="lastName" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" type="email" formControlName="email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" type="password" formControlName="password" />
+      </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="register()">
+      Register
+    </button>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+  <h1 class="title">
+    {{ title }}
+  </h1>
+
+  <form [formGroup]="employeeForm" class="form">
+    <mat-form-field appearance="outline">
+      <mat-label>ID</mat-label>
+      <input matInput placeholder="ID" formControlName="employeeId" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Role</mat-label>
+      <input matInput placeholder="Role" formControlName="role" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="Last Name" formControlName="employeeLastName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="First Name" formControlName="employeeFirstName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Salary (€)</mat-label>
+      <input matInput placeholder="Salary (€)" formControlName="salary" />
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Phone No.</mat-label>
+      <input matInput placeholder="Phone No." formControlName="phoneNumber" />
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="!data.employee ? addEmployee() : editEmployee()" appHoverButton>
+    Save
+  </button>
+</div>

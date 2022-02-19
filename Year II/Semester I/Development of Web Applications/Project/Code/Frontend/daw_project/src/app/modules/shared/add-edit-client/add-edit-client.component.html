@@ -1,0 +1,51 @@
+<div class="container">
+  <h1 class="title">
+    {{ title }}
+  </h1>
+
+  <form [formGroup]="clientForm" class="form">
+    <mat-form-field appearance="outline">
+      <mat-label>ID</mat-label>
+      <input matInput placeholder="ID" formControlName="clientId" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="Last Name" formControlName="clientLastName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="First Name" formControlName="clientFirstName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Delivery Address ID</mat-label>
+      <input matInput placeholder="Delivery Address ID" formControlName="deliveryAddressId" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Country</mat-label>
+      <input matInput placeholder="Country" formControlName="country" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>City</mat-label>
+      <input matInput placeholder="City" formControlName="city" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Street</mat-label>
+      <input matInput placeholder="Street" formControlName="street" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Street No.</mat-label>
+      <input matInput placeholder="Street No." formControlName="streetNumber" />
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="!data.client ? addClient() : editClient()" appHoverButton class="button">
+    Save
+  </button>
+</div>

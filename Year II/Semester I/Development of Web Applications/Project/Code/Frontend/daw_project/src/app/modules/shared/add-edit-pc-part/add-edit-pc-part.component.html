@@ -1,0 +1,36 @@
+<div class="container">
+  <h1 class="title">
+    {{ title }}
+  </h1>
+
+  <form [formGroup]="pcComponentForm" class="form">
+    <mat-form-field appearance="outline">
+      <mat-label>ID</mat-label>
+      <input matInput placeholder="ID" formControlName="componentId" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Component Name</mat-label>
+      <input matInput placeholder="Component Name" formControlName="componentName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Seller</mat-label>
+      <input matInput placeholder="Seller" formControlName="seller" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Recommended For Gaming</mat-label>
+      <input matInput placeholder="Recommended For Gaming" formControlName="recommendedForGaming" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Price (€)</mat-label>
+      <input matInput placeholder="Price (€)" formControlName="price" />
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="!data.pcComponent ? addComponent() : editComponent()" appHoverButton>
+    Save
+  </button>
+</div>

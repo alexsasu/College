@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="title">
+      Employee Info
+    </h1>
+  
+    <mat-card class="card">
+      <p class="info">
+        {{ 'ID' | marks }} {{ employee.employeeId }}
+      </p>
+      <p class="info">
+        {{ 'Role' | marks }} {{ employee.role }}
+      </p>
+      <p class="info">
+        {{ 'Last Name' | marks }} {{ employee.employeeLastName }}
+      </p>
+      <p class="info">
+        {{ 'First Name' | marks }} {{ employee.employeeFirstName }}
+      </p>
+      <p class="info">
+        {{ 'Salary (€)' | marks }} {{ employee.salary }} €
+      </p>
+      <p class="info">
+        {{ 'Phone No.' | marks }} {{ employee.phoneNumber }}
+      </p>
+    </mat-card>
+  </div>

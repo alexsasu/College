@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = asp_project
+build_property.ProjectDir = C:\Users\Alex\OneDrive - unibuc.ro\Desktop\Diverse\GitHub\College\Year II\Semester I\Development of Web Applications\Project\Backend\asp_project\asp_project\

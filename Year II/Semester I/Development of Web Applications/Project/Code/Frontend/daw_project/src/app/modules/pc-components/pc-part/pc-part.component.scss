@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #777777;
+  }
+
+  .card {
+    padding: 25px;
+    padding-bottom: 20px;
+
+    .info {
+      font-size: 15px;
+    }
+
+    .addToCart {
+      display: flex;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<button mat-raised-button (click)="logout()" class="logout" appHoverButton>
+  Logout
+</button>
+
+<div class="container">
+    <h1 class="title">
+      Employees
+    </h1>
+  
+    <table mat-table [dataSource]="employees" class="mat-elevation-z8 demo-table table">
+      <ng-container matColumnDef="employeeId">
+        <th mat-header-cell *matHeaderCellDef class="colName">ID</th>
+        <td mat-cell *matCellDef="let element" class="colContent">{{element.employeeId}}</td>
+      </ng-container>
+    
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef class="colName">Role</th>
+        <td mat-cell *matCellDef="let element" class="colContent">{{element.role}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="employeeLastName">
+        <th mat-header-cell *matHeaderCellDef class="colName">Last Name</th>
+        <td mat-cell *matCellDef="let element" class="colContent">{{element.employeeLastName}}</td>
+      </ng-container>
+    
+      <ng-container matColumnDef="employeeFirstName">
+        <th mat-header-cell *matHeaderCellDef class="colName">First Name</th>
+        <td mat-cell *matCellDef="let element" class="colContent">{{element.employeeFirstName}}</td>
+      </ng-container>
+    
+      <ng-container matColumnDef="salary">
+        <th mat-header-cell *matHeaderCellDef class="colName">Salary (€)</th>
+        <td mat-cell *matCellDef="let element" class="colContent">{{element.salary}} €</td>
+      </ng-container>
+
+      <ng-container matColumnDef="phoneNumber">
+        <th mat-header-cell *matHeaderCellDef class="colName">Phone No.</th>
+        <td mat-cell *matCellDef="let element" class="colContent">{{element.phoneNumber}}</td>
+      </ng-container>
+      
+      <ng-container matColumnDef="profile">
+        <th mat-header-cell *matHeaderCellDef class="colName">Profile</th>
+        <td mat-cell *matCellDef="let element" class="colContent" (click)="viewEmployeeProfile(element.employeeId)">
+          <mat-icon>
+            person
+          </mat-icon>
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef class="colName">Edit</th>
+        <td mat-cell *matCellDef="let element" class="colContent" (click)="editEmployee(element)">
+          <mat-icon>
+            edit
+          </mat-icon>
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef class="colName">Delete</th>
+        <td mat-cell *matCellDef="let element" class="colContent" (click)="deleteEmployee(element.employeeId)">
+          <mat-icon>
+            delete
+          </mat-icon>
+        </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <button mat-raised-button (click)="addNewEmployee()" class="add-button" appHoverButton>
+      Add Employee
+    </button>
+  </div>

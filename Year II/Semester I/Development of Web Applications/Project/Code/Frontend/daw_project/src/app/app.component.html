@@ -1,0 +1,32 @@
+<router-outlet>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:4200/pc-components" appHoverNavbarElement>PC Components</a>
+      </li>
+      <div *ngIf="user.roles.includes('Admin')">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:4200/clients" appHoverNavbarElement>Clients</a>
+        </li>
+      </div>
+      <div *ngIf="user.roles.includes('Admin')">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:4200/employees" appHoverNavbarElement>Employees</a>
+        </li>
+      </div>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:4200/auth/login" appHoverNavbarElement>Login</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:4200/auth/register" appHoverNavbarElement>Register</a>
+      </li>
+    </ul>
+  </nav>
+</router-outlet>

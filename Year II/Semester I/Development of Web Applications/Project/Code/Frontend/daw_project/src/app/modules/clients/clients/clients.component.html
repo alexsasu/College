@@ -1,0 +1,85 @@
+<button mat-raised-button (click)="logout()" class="logout" appHoverButton>
+  Logout
+</button>
+
+<div class="container">
+  <h1 class="title">
+    Clients
+  </h1>
+
+  <table mat-table [dataSource]="clients" class="mat-elevation-z8 demo-table table">
+    <ng-container matColumnDef="clientId">
+      <th mat-header-cell *matHeaderCellDef class="colName">ID</th>
+      <td mat-cell *matCellDef="let element" class="colContent">{{element.clientId}}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="clientLastName">
+      <th mat-header-cell *matHeaderCellDef class="colName">Last Name</th>
+      <td mat-cell *matCellDef="let element" class="colContent">{{element.clientLastName}}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="clientFirstName">
+      <th mat-header-cell *matHeaderCellDef class="colName">First Name</th>
+      <td mat-cell *matCellDef="let element" class="colContent">{{element.clientFirstName}}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="deliveryAddressId">
+      <th mat-header-cell *matHeaderCellDef class="colName">Delivery Address ID</th>
+      <td mat-cell *matCellDef="let element" class="colContent">{{element.deliveryAddressId}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="country">
+      <th mat-header-cell *matHeaderCellDef class="colName">Country</th>
+      <td mat-cell *matCellDef="let element" class="colContent">{{element.country}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef class="colName">City</th>
+      <td mat-cell *matCellDef="let element" class="colContent">{{element.city}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="street">
+      <th mat-header-cell *matHeaderCellDef class="colName">Street</th>
+      <td mat-cell *matCellDef="let element" class="colContent">{{element.street}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="streetNumber">
+      <th mat-header-cell *matHeaderCellDef class="colName">Street No.</th>
+      <td mat-cell *matCellDef="let element" class="colContent">{{element.streetNumber}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="profile">
+      <th mat-header-cell *matHeaderCellDef class="colName">Profile</th>
+      <td mat-cell *matCellDef="let element" class="colContent" (click)="viewClientProfile(element.clientId)">
+        <mat-icon>
+          person
+        </mat-icon>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef class="colName">Edit</th>
+      <td mat-cell *matCellDef="let element" class="colContent" (click)="editClient(element)">
+        <mat-icon>
+          edit
+        </mat-icon>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef class="colName">Delete</th>
+      <td mat-cell *matCellDef="let element" class="colContent" (click)="deleteClient(element.clientId)">
+        <mat-icon>
+          delete
+        </mat-icon>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <button mat-raised-button (click)="addNewClient()" class="add-button" appHoverButton>
+    Add Client
+  </button>
+</div>

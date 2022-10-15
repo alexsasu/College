@@ -1,0 +1,227 @@
+html {
+  max-width: 1050px;
+  margin: auto;
+  background: url(solidworks-2019-hardware-faqs.jpg) no-repeat center center
+    fixed;
+  background-size: cover;
+}
+
+header {
+  background: linear-gradient(45deg, #0593ac, #e7e7e7);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#title {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  font-size: 62px;
+  padding: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  background-color: rgb(0, 0, 0);
+  font-family: "Courier New", Courier, monospace;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.menu ul {
+  display: none;
+}
+
+.menu > li:hover > ul {
+  display: block;
+  background-color: rgb(0, 0, 0);
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.menu li:hover {
+  background-color: rgba(109, 106, 106, 0.699);
+  z-index: 10;
+}
+
+.menu > li {
+  flex-grow: 1;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+  flex-basis: 0;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.menu > li:nth-of-type(1) {
+  border-bottom-left-radius: 20px;
+}
+
+.menu > li:nth-of-type(5) {
+  border-bottom-right-radius: 20px;
+}
+
+.submenu1 > li:last-child {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.submenu1 {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.content {
+  background: rgb(255, 255, 255);
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px grey;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#processors > div {
+  background: linear-gradient(-45deg, #ffffff, #e7e7e7);
+  padding-top: 18px;
+  padding-bottom: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 5px gray;
+}
+
+#processors {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#processors img {
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px gray;
+}
+
+#amd_proc {
+  height: 225px;
+  width: 300px;
+}
+
+#intel_proc {
+  height: 200px;
+  width: 200px;
+}
+
+figcaption {
+  margin-top: 18px;
+  padding-left: 20px;
+  margin-bottom: 13px;
+  font-size: 17px;
+}
+
+figcaption ul li {
+  margin-bottom: 5px;
+}
+
+figcaption ul li a {
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: black;
+  transition: color 1s;
+}
+
+figcaption ul li a:hover {
+  margin-bottom: 5px;
+  text-decoration: underline;
+  color: rgb(153, 150, 150);
+}
+
+figcaption ul li {
+  list-style-type: none;
+}
+
+figcaption ul li a:before {
+  content: "\2022";
+  color: black;
+  font-weight: bold;
+  display: inline-block;
+  width: 1.2em;
+  margin-left: -1em;
+  transition: color 1s;
+}
+
+figcaption ul li a:hover:before {
+  width: 1em;
+  color: rgb(153, 150, 150);
+}
+
+footer {
+  max-width: 1050px;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@media screen and (min-width: 730px) {
+  .content {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  footer {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  html {
+    max-width: 450px;
+  }
+
+  #title {
+    font-size: 36.4px;
+  }
+
+  .menu {
+    font-size: 12px;
+  }
+
+  .content {
+    margin: auto;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding-top: 27px;
+    padding-bottom: 5px;
+    width: 350px;
+  }
+
+  #processors {
+    flex-direction: column;
+    align-items: center;
+  }
+}
